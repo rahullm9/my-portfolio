@@ -1,4 +1,8 @@
 @import "tailwindcss";
+body {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   background-color: black;
@@ -14,6 +18,7 @@ h2 {
 }
 button {
   font-size: 1.2vw;
+  cursor: pointer;
 }
 #nav {
   width: 100%;
@@ -26,6 +31,29 @@ button {
 }
 #buttonsContainer i {
   display: none;
+}
+.hero{
+  padding: 0px 4vw;
+  width: 100%;
+  height: calc(100vh - 10vh);
+}
+.content-section h1{
+  font-size: 5vw;
+  font-weight: 900;
+}
+.content-section{
+ width: calc((100% - 8px) / 2);
+ height: calc(100vh - (1px + 10vh));
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ padding: 4vw;
+}
+
+.image-section{
+  width: calc((100% - 8px) / 2);
+  height: calc(100vh - (1px + 10vh));
 }
 
 /* media query */
@@ -43,17 +71,16 @@ button {
     flex-direction: column;
   }
   .content-section{
-    width: ;
+    width: 100%;
+    height: calc(100vh - (1px + 10vh));
+  }
+  .image-section{
+    width: 100%;
+    height: calc(100vh - (1px + 10vh));
+  }
+  .content-section h1{
+    font-size: 13vw;
   }
 }
 
-.hero{
-  padding: 0px 4vw;
-}
-.content-section{
- width: calc((100% - 8px) / 2);
- height: calc(100vh - (1px + 10vh));
-}
-.image-section{
-  width: calc((100% - 8px) / 2);
-}
+
