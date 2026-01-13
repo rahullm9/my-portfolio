@@ -5,19 +5,46 @@ import { FaBrain } from "react-icons/fa6";
 import { IoSchoolSharp } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
 import Particles from "../assets/Particles";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const menuItems = [
-    { id: 1, label: "About", color: "bg-[#535C91]", icon: <FaInfoCircle /> },
-    { id: 2, label: "Project", color: "bg-[#535C91]", icon: <FaFolderOpen /> },
-    { id: 3, label: "Skills", color: "bg-[#535C91]", icon: <FaBrain /> },
+    {
+      id: 1,
+      label: "About Me",
+      path: "/about",
+      color: "bg-[#535C91]",
+      icon: <FaInfoCircle />,
+    },
+    {
+      id: 2,
+      label: "Project",
+      path: "/project",
+      color: "bg-[#535C91]",
+      icon: <FaFolderOpen />,
+    },
+    {
+      id: 3,
+      label: "Skills",
+      path: "/skills",
+      color: "bg-[#535C91]",
+      icon: <FaBrain />,
+    },
     {
       id: 4,
       label: "Education",
+      path: "/education",
       color: "bg-[#535C91]",
       icon: <IoSchoolSharp />,
     },
-    { id: 5, label: "Contact", color: "bg-[#535C91]", icon: <IoCall /> },
+    {
+      id: 5,
+      label: "Contact",
+      path: "/contact",
+      color: "bg-[#535C91]",
+      icon: <IoCall />,
+    },
   ];
 
   return (
@@ -39,7 +66,13 @@ const HeroSection = () => {
       {/* Center Text */}
       <div className="flex flex-col justify-center items-center  absolute z-1">
         <h1 className="text-8xl font-bold  text-white ">WEB DEVELOPER</h1>
-        <h4 className="text-white">I'm a Full Stack web developer</h4>
+        <h4 className="text-white pr-40 pl-40 mt-4">
+          I’m a Full-Stack Web Developer who enjoys turning ideas into
+          functional, responsive web applications. I work across both frontend
+          and backend, building clean UIs, robust APIs, and scalable systems.
+          I’m passionate about learning, problem-solving, and crafting
+          meaningful digital experiences.
+        </h4>
       </div>
 
       {/* *****************-------sidebar----------*************** */}
@@ -47,6 +80,7 @@ const HeroSection = () => {
         {menuItems.map((item) => (
           <div
             key={item.id}
+            onClick={() => navigate(item.path)}
             className="group flex items-center justify-end w-12 h-12 bg-[#1B1A55] rounded-full cursor-pointer overflow-hidden hover:w-40 transition-all duration-500 ease-in-out shadow-2xl border-2 border-[#9290C3]"
           >
             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-4 text-white font-bold whitespace-nowrap delay-100">
