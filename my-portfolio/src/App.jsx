@@ -7,18 +7,21 @@ import Project from "./components/Project.jsx";
 import Contact from "./components/Contact.jsx";
 import Skills from "./components/Skills.jsx";
 import Educations from "./components/Educations.jsx";
+import Layout from "./Layout.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/education" element={<Educations />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/education" element={<Educations />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 };
