@@ -47,7 +47,7 @@ const Sidebar = () => {
   ];
   return (
     <div>
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-50 items-end">
+      <div className="fixed  flex flex-row gap-6 z-5 bottom-4 left-1/2 -translate-x-1/2">
         {menuItems.map((item) => (
           <div
             key={item.id}
