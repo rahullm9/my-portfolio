@@ -5,7 +5,10 @@ const HeroSection = () => {
   return (
     <div className="hero-main relative bg-black h-screen w-full flex  justify-center items-center z-0 overflow-hidden">
       {/* Background Content Boxes */}
-      <div style={{ width: "100%", height: "600px", position: "relative" }}>
+      <div
+        className="w-full h-screen"
+        style={{ width: "100%", height: "600px", position: "relative" }}
+      >
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={200}
@@ -20,8 +23,10 @@ const HeroSection = () => {
 
       {/* Center Text */}
       <div className="flex flex-col justify-center items-center  absolute z-1">
-        <h1 className="text-8xl font-bold  text-white ">Rahul Mahato</h1>
-        <h4 className="text-white pr-40 pl-40 ">
+        <h1 className="hero-page-name text-8xl font-bold  text-white ">
+          Rahul Mahato
+        </h1>
+        <h4 className="text-white  ">
           Programmer · Full-Stack Developer · Problem-Solver
         </h4>
       </div>

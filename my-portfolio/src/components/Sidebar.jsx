@@ -5,6 +5,7 @@ import { FaBrain } from "react-icons/fa6";
 import { IoSchoolSharp } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { IoHome } from "react-icons/io5";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -13,35 +14,42 @@ const Sidebar = () => {
       id: 1,
       label: "About Me",
       path: "/about",
-      color: "bg-[#535C91]",
+      color: "bg-[#black]",
       icon: <FaInfoCircle />,
     },
     {
       id: 2,
       label: "Project",
       path: "/project",
-      color: "bg-[#535C91]",
+      color: "bg-[#black]",
       icon: <FaFolderOpen />,
     },
     {
       id: 3,
-      label: "Skills",
-      path: "/skills",
-      color: "bg-[#535C91]",
-      icon: <FaBrain />,
+      label: "Home",
+      path: "/",
+      color: "bg-black",
+      icon: <IoHome />,
     },
     {
       id: 4,
-      label: "Education",
-      path: "/education",
-      color: "bg-[#535C91]",
-      icon: <IoSchoolSharp />,
+      label: "Skills",
+      path: "/skills",
+      color: "bg-[#black]",
+      icon: <FaBrain />,
     },
     {
       id: 5,
+      label: "Education",
+      path: "/education",
+      color: "bg-[#black]",
+      icon: <IoSchoolSharp />,
+    },
+    {
+      id: 6,
       label: "Contact",
       path: "/contact",
-      color: "bg-[#535C91]",
+      color: "bg-[#black]",
       icon: <IoCall />,
     },
   ];
@@ -52,7 +60,7 @@ const Sidebar = () => {
           <div
             key={item.id}
             onClick={() => navigate(item.path)}
-            className="group flex items-center justify-end w-12 h-12 bg-[#1B1A55] rounded-full cursor-pointer overflow-hidden hover:w-40 transition-all duration-500 ease-in-out shadow-2xl border-2 border-[#9290C3]"
+            className="group flex items-center justify-end w-12 h-12 bg-black rounded-full cursor-pointer overflow-hidden hover:w-40 transition-all duration-500 ease-in-out shadow-2xl border-2 border-white"
           >
             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-4 text-white font-bold whitespace-nowrap delay-100">
               {item.label}
