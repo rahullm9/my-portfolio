@@ -25,11 +25,12 @@ h4 {
   font-weight: 400;
   font-style: normal;
 }
-img {
+.mypic {
   height: 500px;
   margin-left: 11rem;
 
   border-right: 6px solid blueviolet;
+  border-radius: 20px;
   border-bottom: 6px solid blueviolet;
 
   box-shadow: 12px 12px 0 rgba(138, 43, 226, 0.3);

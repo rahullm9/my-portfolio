@@ -9,25 +9,25 @@ const About = () => {
   const intrestItem = [
     {
       id: 1,
-      color: "bg-[#8a2be2]",
+      color: "text-[#8a2be2]",
       icon: <FaHeadphones />,
       label: "Music",
     },
     {
       id: 2,
-      color: "bg-[#8a2be2]",
+      color: "text-[#8a2be2]",
       icon: <TbMotorbike />,
       label: "Travel",
     },
     {
       id: 3,
-      color: "bg-[#8a2be2]",
+      color: "text-[#8a2be2]",
       icon: <MdLocalMovies />,
       label: "Movie",
     },
     {
       id: 4,
-      color: "bg-[#8a2be2]",
+      color: "text-[#8a2be2]",
       icon: <IoIosColorPalette />,
       label: "Art",
     },
@@ -41,7 +41,7 @@ const About = () => {
       </div>
       <div className="text-white flex flex-row ">
         <div className="w-1/3">
-          <img className="" src={Mypic} alt="profile picture" />
+          <img className="mypic" src={Mypic} alt="profile picture" />
         </div>
         <div className="w-2/3 pl-10 pr-40 ">
           <h2 className="text-4xl text-[#8a2be2] font-bold molle-regular-italic ">
@@ -80,17 +80,18 @@ const About = () => {
               Hire Me
             </button>
           </div>
-          <div className="flex mt-6 flex-col bg-amber-300">
+          <div className="flex mt-14 flex-col ">
             <h1 className="text-white text-4xl  marck-script-regular underline">
               My Hobbies
             </h1>
-            <div className="flex flex-row gap-6 mt-6 ">
+            <div className="flex flex-row gap-8 mt-6 ">
               {intrestItem.map((item) => (
-                <div key={item.id}>
-                  <span className="flex flex-row">{item.label}</span>
-                  <div className={"${item.color}"}>
-                    <span>{item.icon}</span>
-                  </div>
+                <div
+                  className="flex flex-row justify-center items-center gap-2 text-xl"
+                  key={item.id}
+                >
+                  <span className={`${item.color}`}>{item.icon}</span>
+                  <span className="">{item.label}</span>
                 </div>
               ))}
             </div>
