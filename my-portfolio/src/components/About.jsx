@@ -66,7 +66,7 @@ const About = () => {
               className="border-2 p-2 rounded
              transition-all duration-500 ease-out
              hover:bg-[#8a2be2] hover
-             hover:-translate-y-1 hover:shadow-lg"
+             hover:-translate-y-1 hover:shadow-lg cursor-pointer"
             >
               Download CV
             </button>
@@ -75,7 +75,7 @@ const About = () => {
               className="relative rounded px-4 py-2 text-white
                    bg-white/10 backdrop-blur-md border border-white/20
                    transition-all duration-300
-                   hover:shadow-[0_0_20px_#8a2be2]"
+                   hover:shadow-[0_0_20px_#8a2be2] cursor-pointer"
             >
               Hire Me
             </button>
